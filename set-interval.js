@@ -10,9 +10,29 @@ function showNumber(num){
 
 function interval(){
         counter++;
-        // write some code here
+
+      if  (counter == 61){
+        (counter = 0);
+      }
 
         showNumber(counter);
 }
 
-setInterval(interval, 500);
+setInterval(interval, 1000);
+
+var counter = 0;
+setInterval(function(){
+  counter--;
+  if (counter >= 40){
+    go();
+  }
+  else if (counter < 40 && counter > 30){
+    caution();
+  }
+  else{
+    stop();
+  }
+  if (counter == 61){
+    counter = 0;
+  }
+}, 1000);

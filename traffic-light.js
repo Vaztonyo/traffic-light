@@ -47,21 +47,20 @@ function captureTimeChange(cb){
 
 
 
-/*
-var counter = 60;
+
+var counter = 0;
 setInterval(function(){
-  counter--;
-  if (counter > 40){
-    stop();
-  }
-  else if (counter < 40 && counter > 20){
+  counter++;
+  if (counter >= 40){
     go();
   }
+  else if (counter < 40 && counter > 30){
+    caution();
+  }
   else{
-    carefull();
+    stop();
   }
-  if (counter === 0){
-    counter = 60;
+  if (counter == 61){
+    counter = 0;
   }
-}, 500);
-*/
+}, 1000);
