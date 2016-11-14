@@ -48,9 +48,9 @@ function captureTimeChange(cb){
 
 
 
-var counter = 60;
+var counter = 0;
 setInterval(function(){
-  counter--;
+  counter++;
   if (counter >= 40){
     go();
   }
@@ -60,7 +60,7 @@ setInterval(function(){
   else{
     stop();
   }
-  if (counter == -1){
-    counter = 60;
+  if (counter == 61){
+    counter = 0;
   }
 }, 800);
