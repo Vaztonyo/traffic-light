@@ -9,10 +9,10 @@ function showNumber(num){
 }
 
 function interval(){
-        counter--;
+        counter++;
 
-      if  (counter == -1){
-        (counter = 60);
+      if  (counter == 61){
+        (counter = 0);
       }
 
         showNumber(counter);
@@ -20,9 +20,9 @@ function interval(){
 
 setInterval(interval, 800);
 
-var counter = 60;
+var counter = 0;
 setInterval(function(){
-  counter++;
+  counter--;
   if (counter >= 40){
     go();
   }
@@ -32,7 +32,7 @@ setInterval(function(){
   else{
     stop();
   }
-  if (counter == -1){
-    counter = 60;
+  if (counter == 61){
+    counter = 0;
   }
 }, 800);
